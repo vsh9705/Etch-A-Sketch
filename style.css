@@ -60,7 +60,7 @@ button:active {
     }
     .pixel {
         flex: 1 1 auto;
-        background-color: gray;
+        background-color: white;
         border: 1px solid black;
     }
     
