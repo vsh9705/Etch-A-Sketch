@@ -9,3 +9,11 @@ for(var i = 0 ; i < 16 ; i ++){
         grid_row.appendChild(grid_col);
     }
 }
+
+const pixels = document.querySelectorAll(".pixel");
+
+pixels.forEach(pixel => {
+    pixel.addEventListener("mouseover", () => {
+        pixel.style.backgroundColor = "blue";
+    })
+})
