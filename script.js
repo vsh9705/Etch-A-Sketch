@@ -2,7 +2,6 @@ const grid = document.querySelector("#grid");
 
 let pixelNumber = 16;
 
-
 const randomColor = () => {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
