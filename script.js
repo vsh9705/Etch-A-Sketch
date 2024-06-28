@@ -26,11 +26,29 @@ function createGrid (pixelNumber){
             grid_row.appendChild(grid_col);
         }
     }
+
     const pixels = document.querySelectorAll(".pixel");
+
+    let click = false;
+    pixels.forEach(pixel => {
+        pixel.addEventListener("click", () => {
+            if(click === false){
+                click = true;
+                const newColor = randomColor();
+                pixel.style.backgroundColor = newColor;
+            }
+            else{
+                click = false;
+            }
+        })
+    })
+    
     pixels.forEach(pixel => {
         pixel.addEventListener("mouseover", () => {
-            const newColor = randomColor();
-            pixel.style.backgroundColor = newColor;
+            if(click === true){
+                const newColor = randomColor();
+                pixel.style.backgroundColor = newColor;
+            }
         })
     })
 }
